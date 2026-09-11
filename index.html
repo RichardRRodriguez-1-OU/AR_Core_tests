@@ -11,14 +11,12 @@
 
   <title>San Carlos 3D Viewer</title>
 
-  <!-- Google Model Viewer -->
   <script
     type="module"
     src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js">
   </script>
 
   <style>
-
     html,
     body {
       margin: 0;
@@ -26,26 +24,29 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background: #eeeeee;
+
+      /* Transparent page */
+      background: transparent;
     }
 
     model-viewer {
       width: 100%;
       height: 100vh;
-      background-color: #eeeeee;
-    }
 
+      /* Transparent viewer */
+      background-color: transparent;
+    }
   </style>
 </head>
 
 <body>
 
   <model-viewer
-    src="SanCarlosPhone.glb"
+    src="./SanCarlosPhone.glb"
     alt="3D model of San Carlos"
     camera-controls
     auto-rotate
-    shadow-intensity="1"
+    shadow-intensity="0"
     exposure="1">
   </model-viewer>
 
